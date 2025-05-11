@@ -16,17 +16,17 @@ export default function HomePage() {
 
   const heroSlides = [
     {
-      image: "src/assets/catring.jpg",
+      image: "/assets/catring.jpg",
       title: "Creating Unforgettable Events",
       subtitle: "From concept to execution, we bring your vision to life",
     },
     {
-      image: "src/assets/heroimage.png",
+      image: "/assets/heroimage.png",
       title: "Weddings & Celebrations",
       subtitle: "Making your special day truly magical",
     },
     {
-      image: "src/assets/cooking.webp",
+      image: "/assets/cooking.webp",
       title: "School Events",
       subtitle: "Professional planning for successful business gatherings",
     },
@@ -34,25 +34,25 @@ export default function HomePage() {
 
   const services = [
     {
-      image: "src/assets/download.png?height=600&width=800",
+      image: "/assets/download.png?height=600&width=800",
       title: "Wedding Planning",
       description: "Comprehensive wedding planning services to make your special day perfect.",
       link: "/services#wedding",
     },
     {
-      image: "src/assets/download.png?height=600&width=800",
+      image: "/assets/download.png?height=600&width=800",
       title: "Corporate Events",
       description: "Professional corporate event management for conferences and team building.",
       link: "/services#corporate",
     },
     {
-      image: "src/assets/download.png?height=600&width=800",
+      image: "/assets/download.png?height=600&width=800",
       title: "Pasni",
       description: "Creative birthday party planning for all ages with custom themes.",
       link: "/services#birthday",
     },
     {
-      image: "src/assets/download.png?height=600&width=800",
+      image: "/assets/download.png?height=600&width=800",
       title: "School Events",
       description: "Elegant award ceremonies that recognize achievements with style.",
       link: "/services#awards",
@@ -208,7 +208,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="src/assets/catring.jpg" alt="About EventMaster" className="rounded-lg shadow-lg" />
+              <img src="/assets/catring.jpg" alt="About EventMaster" className="rounded-lg shadow-lg" />
             </div>
             <div className="space-y-6">
               <h3 className="text-2xl font-bold">Your Vision, Our Expertise</h3>
@@ -354,22 +354,22 @@ export default function HomePage() {
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <img
-                  src="src/assets/useme.jpeg"
+                  src="/assets/useme.jpeg"
                   alt="Gallery image 1"
                   className="rounded-lg hover:opacity-80 transition-opacity cursor-pointer h-40 md:h-64 w-full object-cover"
                 />
                 <img
-                  src="src/assets/useme.jpeg?height=300&width=300"
+                  src="/assets/useme.jpeg?height=300&width=300"
                   alt="Gallery image 2"
                   className="rounded-lg hover:opacity-80 transition-opacity cursor-pointer h-40 md:h-64 w-full object-cover"
                 />
                 <img
-                  src="src/assets/useme.jpeg?height=300&width=300"
+                  src="/assets/useme.jpeg?height=300&width=300"
                   alt="Gallery image 3"
                   className="rounded-lg hover:opacity-80 transition-opacity cursor-pointer h-40 md:h-64 w-full object-cover"
                 />
                 <img
-                  src="src/assets/useme.jpeg?height=300&width=300"
+                  src="/assets/useme.jpeg?height=300&width=300"
                   alt="Gallery image 4"
                   className="rounded-lg hover:opacity-80 transition-opacity cursor-pointer h-40 md:h-64 w-full object-cover"
                 />

@@ -15,7 +15,7 @@ import { useGallery } from "../context/gallery-context";
 export default function GalleryPage() {
   const { images, loading, error, refreshImages } = useGallery();
   const [category, setCategory] = useState("all");
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [, setSelectedImage] = useState<string | null>(null);
 
   const categories = [
     { id: "all", name: "All Events" },
@@ -69,7 +69,7 @@ export default function GalleryPage() {
       <section className="relative h-[40vh] min-h-[300px]">
         <div className="absolute inset-0">
           <img
-            src="src/assets/heroimage.png?height=600&width=1200"
+            src="/assets/heroimage.png?height=600&width=1200"
             alt="Gallery"
             className="w-full h-full object-cover"
           />

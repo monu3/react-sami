@@ -60,7 +60,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src="src/assets/eventlogo.png" alt="SH Events" className="h-24 w-auto" />
+          <img src="/assets/eventlogo.png" alt="SH Events" className="h-24 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

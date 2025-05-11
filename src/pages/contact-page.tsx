@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section className="relative h-[40vh] min-h-[400px]">
         <div className="absolute inset-0">
           <img
-            src="src/assets/heroimage.png"
+            src="/assets/heroimage.png"
             alt="Contact Us"
             className="w-full h-full object-cover"
           />

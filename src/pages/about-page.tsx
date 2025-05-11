@@ -66,7 +66,7 @@ export default function AboutPage() {
       <section className="relative h-[40vh] min-h-[400px]">
         <div className="absolute inset-0">
           <img
-            src="src/assets/heroimage.png"
+            src="/assets/heroimage.png"
             alt="About Us"
             className="w-full h-full object-cover"
           />
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <img
-                src="src/assets/heroimage.png"
+                src="/assets/heroimage.png"
                 alt="Our Team"
                 className="rounded-lg shadow-lg"
               />

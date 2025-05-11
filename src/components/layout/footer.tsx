@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <div className="mb-4 items-center">
               <img
-                src="src/assets/eventlogo.png"
+                src="/assets/eventlogo.png"
                 alt="SH Events"
                 className="h-24 w-auto"
               />

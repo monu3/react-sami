@@ -8,7 +8,7 @@ export default function ServicesPage() {
       title: "Wedding Planning",
       description:
         "Comprehensive wedding planning services to make your special day perfect. From venue selection to coordination on the day, we handle every detail.",
-      image: "src/assets/heroimage.png?height=600&width=400",
+      image: "/assets/heroimage.png?height=600&width=400",
       features: [
         "Venue selection and booking",
         "Vendor coordination",
@@ -23,7 +23,7 @@ export default function ServicesPage() {
       title: "Corporate Events",
       description:
         "Professional corporate event management for conferences, team building activities, product launches, and more.",
-      image: "src/assets/heroimage.png?height=600&width=400",
+      image: "/assets/heroimage.png?height=600&width=400",
       features: [
         "Conference planning",
         "Team building activities",
@@ -38,7 +38,7 @@ export default function ServicesPage() {
       title: "Cooking Services",
       description:
         "Creative birthday party planning for all ages with custom themes, entertainment, and memorable experiences.",
-      image: "src/assets/cooking.webp?height=600&width=400",
+      image: "/assets/cooking.webp?height=600&width=400",
       features: [
         "Theme development",
         "Venue decoration",
@@ -53,7 +53,7 @@ export default function ServicesPage() {
       title: "Bratabandha Ceremony",
       description:
         "Elegant award ceremonies that recognize achievements with style, from corporate recognition to industry galas.",
-      image: "src/assets/bartha.webp?height=600&width=400",
+      image: "/assets/bartha.webp?height=600&width=400",
       features: [
         "Venue selection",
         "Stage design",
@@ -68,7 +68,7 @@ export default function ServicesPage() {
       title: "Pasni Ceremony",
       description:
         "Book top-tier entertainment for your event, from live bands and DJs to performers and speakers.",
-      image: "src/assets/heroimage.png?height=600&width=400",
+      image: "/assets/heroimage.png?height=600&width=400",
       features: [
         "Live music booking",
         "DJ services",
@@ -83,7 +83,7 @@ export default function ServicesPage() {
       title: "Haldi & Mehendi ceremony",
       description:
         "Capture your event with professional photography and videography services that document every special moment.",
-      image: "src/assets/heroimage.png?height=600&width=400",
+      image: "/assets/heroimage.png?height=600&width=400",
       features: [
         "Event photography",
         "Videography services",
@@ -98,7 +98,7 @@ export default function ServicesPage() {
       title: "Catering Services",
       description:
         "Delicious catering options for any event, with custom menus tailored to your preferences and dietary needs.",
-      image: "src/assets/catring.jpg?height=600&width=400",
+      image: "/assets/catring.jpg?height=600&width=400",
       features: [
         "Custom menu creation",
         "Buffet service",
@@ -113,7 +113,7 @@ export default function ServicesPage() {
       title: "Decor & Styling",
       description:
         "Transform your venue with stunning decor and styling that creates the perfect atmosphere for your event.",
-      image: "src/assets/image3.jpeg",
+      image: "/assets/image3.jpeg",
       features: [
         "Theme development",
         "Floral arrangements",
@@ -131,7 +131,7 @@ export default function ServicesPage() {
       <section className="relative h-[40vh] min-h-[400px]">
         <div className="absolute inset-0">
           <img
-            src="src/assets/heroimage.png"
+            src="/assets/heroimage.png"
             alt="Our Services"
             className="w-full h-full object-cover"
           />

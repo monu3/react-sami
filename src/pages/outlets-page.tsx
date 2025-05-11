@@ -13,7 +13,7 @@ export default function OutletsPage() {
     {
       id: 1,
       name: "Surkhet",
-      image: "src/assets/heroimage.png",
+      image: "/assets/heroimage.png",
       address: "Birendranagar-6, Surkhet",
       phone: "9848262653",
       email: "samitenthouse@gmail.com",
@@ -23,7 +23,7 @@ export default function OutletsPage() {
     {
       id: 2,
       name: "Dang",
-      image: "src/assets/heroimage.png",
+      image: "/assets/heroimage.png",
       address: "Ghorahi-10,Dang",
       phone: "9876543210",
       email: "example@gmail.com",
@@ -33,7 +33,7 @@ export default function OutletsPage() {
     {
       id: 3,
       name: "Tulsipur",
-      image: "src/assets/heroimage.png",
+      image: "/assets/heroimage.png",
       address: "Tulsipur-1,Dang",
       phone: "9876543210",
       email: "example@gmail.com",
@@ -48,7 +48,7 @@ export default function OutletsPage() {
       <section className="relative h-[40vh] min-h-[400px]">
         <div className="absolute inset-0">
           <img
-            src="src/assets/map.png"
+            src="/assets/map.png"
             alt="Our Outlets"
             className="w-full h-full object-cover"
           />
