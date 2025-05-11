@@ -1,4 +1,5 @@
 // server.js
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const { v2: cloudinary } = require("cloudinary");
@@ -10,9 +11,9 @@ app.use(cors());
 
 // Cloudinary config
 cloudinary.config({
-  cloud_name: "dgauvdk6a",
-  api_key: "999441443759723",
-  api_secret: "Rh863jPaej_iPexJ90owWIXzbEc",
+  cloud_name: process.env.VITE_CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.VITE_CLOUDINARY_API_KEY,
+  api_secret: process.env.VITE_CLOUDINARY_API_SECRET,
 });
 
 // Gallery route
