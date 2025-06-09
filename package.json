@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cp _worker.js dist/",
+    "build": "tsc -b && vite build && touch dist/.assetsignore && cp _worker.js dist/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
