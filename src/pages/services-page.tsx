@@ -175,7 +175,7 @@ export default function ServicesPage() {
               <Card
                 key={service.id}
                 id={service.id}
-                className="group relative h-[500px] overflow-hidden border-0 rounded-lg shadow-md"
+                className="group relative h-[300px] overflow-hidden border-0 rounded-lg shadow-md"
               >
                 {/* Background Image */}
                 <div

@@ -57,11 +57,11 @@ export default function OutletsPage() {
 
         <div className="absolute inset-0 flex items-center justify-center text-center px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "cursive" }}>
               Our Outlets
             </h1>
-            <p className="text-xl text-white/90">
-              Find an EventMaster location near you
+            <p className="text-xl text-white/90" style={{ fontFamily: "cursive" }}>
+              Find us near you
             </p>
           </div>
         </div>

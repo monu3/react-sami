@@ -43,8 +43,8 @@ export default function BookingPage() {
   });
 
   // Contact information for sending booking details
-  const whatsappNumber = "+15551234567"; // Replace with your actual WhatsApp number
-  const contactEmail = "info@eventmaster.com";
+  const whatsappNumber = "+9779800564411"; // Replace with your actual WhatsApp number
+  const contactEmail = "monu9800564411@gmail.com"; // Replace with your actual email
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -188,10 +188,10 @@ Please contact the customer to discuss their event requirements.
 
         <div className="absolute inset-0 flex items-center justify-center text-center px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "cursive" }}>
               Book Your Event
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-xl text-white/90" style={{ fontFamily: "cursive" }}>
               Fill out the form below to start planning your perfect event
             </p>
           </div>
