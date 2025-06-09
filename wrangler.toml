@@ -7,7 +7,6 @@ account_id = "cfab4661433ad09f9e4c6be3e5362608" # From dashboard
 directory = "./dist"
 binding = "ASSETS"  # Explicitly name the binding
 not_found_handling = "single-page-application"
-include = ["**/*"]
 
 [vars]
 CLOUDINARY_CLOUD_NAME = "dgauvdk6a"
