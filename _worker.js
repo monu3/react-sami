@@ -50,11 +50,19 @@ async function handleGalleryRequest(request, env) {
 
     const data = await result.json();
 
-    const images = data.resources.map((img) => ({
-      src: img.secure_url,
-      alt: img.public_id.split("/").pop().replace(/[-_]/g, " "),
-      category: folder,
-    }));
+    // ✅ Optimize the Cloudinary URLs
+    const images = data.resources.map((img) => {
+      const optimizedUrl = img.secure_url.replace(
+        "/upload/",
+        "/upload/f_auto,q_auto,w_800,e_sharpen:150/"
+      );
+
+      return {
+        src: optimizedUrl,
+        alt: img.public_id.split("/").pop().replace(/[-_]/g, " "),
+        category: folder,
+      };
+    });
 
     return corsify(
       new Response(JSON.stringify(images), {
