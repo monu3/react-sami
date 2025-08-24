@@ -1,19 +1,15 @@
 "use client"
 
-import type React from "react"
-
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { Search, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "../ui/button"
-import { Input } from "../ui/input"
 import { useTheme } from "../theme-provider"
 import { cn } from "../../lib/utils"
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [searchQuery, setSearchQuery] = useState("")
   const location = useLocation()
   const { theme, setTheme } = useTheme()
 
@@ -43,13 +39,6 @@ export default function Header() {
     { name: "Contact", path: "/contact" },
     { name: "Outlets", path: "/outlets" },
   ]
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Searching for:", searchQuery)
-    // Implement search functionality
-  }
-
   return (
     <header
       className={cn(
