@@ -81,7 +81,7 @@ export default function Header() {
 
         {/* Search Bar */}
         <div className="hidden md:flex items-center ml-4">
-          <form onSubmit={handleSearch} className="relative">
+          {/* <form onSubmit={handleSearch} className="relative">
             <Input
               type="search"
               placeholder="Search events..."
@@ -93,7 +93,7 @@ export default function Header() {
               <Search className="h-4 w-4" />
               <span className="sr-only">Search</span>
             </Button>
-          </form>
+          </form> */}
           <Button variant="ghost" size="icon" onClick={toggleTheme} className="text-white">
             {theme === "dark" ? "🌙" : "☀️"}
             <span className="sr-only">Toggle theme</span>
@@ -101,7 +101,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <Button variant="secondary" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           <span className="sr-only">Toggle menu</span>
         </Button>
@@ -110,7 +110,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-background shadow-lg md:hidden">
             <div className="container mx-auto px-4 py-4">
-              <form onSubmit={handleSearch} className="relative mb-4">
+              {/* <form onSubmit={handleSearch} className="relative mb-4">
                 <Input
                   type="search"
                   placeholder="Search events..."
@@ -122,7 +122,7 @@ export default function Header() {
                   <Search className="h-4 w-4" />
                   <span className="sr-only">Search</span>
                 </Button>
-              </form>
+              </form> */}
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
                   <Link

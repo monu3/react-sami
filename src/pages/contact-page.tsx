@@ -76,7 +76,7 @@ export default function ContactPage() {
               <Phone className="h-10 w-10 text-primary mb-4" />
               <h3 className="font-bold mb-2">Phone</h3>
               <p>9876543210</p>
-              <p>9876543210</p>
+              <p>9819513221</p>
             </div>
 
             <div className="flex flex-col items-center p-6 bg-muted rounded-lg min-w-[250px]">

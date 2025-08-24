@@ -40,21 +40,21 @@ export default function HomePage() {
       link: "/services#wedding",
     },
     {
-      image: "/assets/download.png?height=600&width=800",
+      image: "/assets/coperativeEvent.jpeg?height=600&width=800",
       title: "Corporate Events",
       description: "Professional corporate event management for conferences and team building.",
       link: "/services#corporate",
     },
     {
-      image: "/assets/download.png?height=600&width=800",
+      image: "/assets/riceFedding.jpeg?height=600&width=800",
       title: "Pasni",
-      description: "Creative birthday party planning for all ages with custom themes.",
+      description: "Creative rice feeding ceremonies with custom themes.",
       link: "/services#birthday",
     },
     {
-      image: "/assets/download.png?height=600&width=800",
+      image: "/assets/schoolEvent.jpeg?height=600&width=800",
       title: "School Events",
-      description: "Elegant award ceremonies that recognize achievements with style.",
+      description: "Elegant School ceremonies that recognize achievements with style.",
       link: "/services#awards",
     },
   ]
@@ -208,12 +208,12 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="/assets/catring.jpg" alt="About EventMaster" className="rounded-lg shadow-lg" />
+              <img src="/assets/catring.jpg" alt="About Sami Tent House" className="rounded-lg shadow-lg" />
             </div>
             <div className="space-y-6">
               <h3 className="text-2xl font-bold">Your Vision, Our Expertise</h3>
               <p>
-                At EventMaster, we believe that every event should be as unique as the individuals hosting it. Our team
+                At Sami Tent House, we believe that every event should be as unique as the individuals hosting it. Our team
                 of experienced event planners works closely with you to understand your vision and bring it to life.
               </p>
               <p>
@@ -250,7 +250,7 @@ export default function HomePage() {
                 ></div>
 
                 {/* Content - Bottom positioned with slide-up effect */}
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-x-0 bottom-0 p-6 text-black shadow transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
                   <p className="text-white/90 mb-4">{service.description}</p>
                 </div>
@@ -404,15 +404,15 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className=" bg-[#131b36] p-8 rounded-lg text-center">
+              <div className=" bg-[#4f5f93] p-8 rounded-lg text-center">
                 <div className="text-4xl font-bold mb-2">90+</div>
                 <div className="text-xl">Vendors</div>
               </div>
-              <div className="bg-[#131b36] p-8 rounded-lg text-center">
+              <div className="bg-[#4f5f93] p-8 rounded-lg text-center">
                 <div className="text-4xl font-bold mb-2">2,000+</div>
                 <div className="text-xl">Designs</div>
               </div>
-              <div className="col-span-2 bg-[#131b36] p-8 rounded-lg text-center">
+              <div className="col-span-2 bg-[#4f5f93] p-8 rounded-lg text-center">
                 <div className="text-4xl font-bold mb-2">6,000+</div>
                 <div className="text-xl">Events Completed</div>
               </div>

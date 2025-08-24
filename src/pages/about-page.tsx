@@ -6,8 +6,8 @@ import { CheckCircle, Users, Target, Lightbulb, Star } from "lucide-react";
 export default function AboutPage() {
   const testimonials = [
     {
-      name: "Monu Siddhique",
-      role: "Bride",
+      name: "Bhuwan Saru Magar",
+      role: "Groom",
       content:
         "Sami Tent House made our wedding day absolutely perfect. Every detail was handled with care and professionalism.",
       rating: 5,
@@ -21,42 +21,10 @@ export default function AboutPage() {
     },
     {
       name: "Sita K.C",
-      role: "Birthday Celebrant",
+      role: "Pasni Celebrant",
       content:
-        "My 30th birthday party exceeded all expectations. The theme, decorations, and coordination were spot on!",
+        "My newly birth baby needs all exceeded expectations. The theme, decorations, and coordination were spot on!",
       rating: 4,
-    },
-  ];
-
-  const milestones = [
-    {
-      year: "2013",
-      title: "Company Founded",
-      description:
-        "Sami Tent House was established with a vision to create exceptional events.",
-    },
-    {
-      year: "2015",
-      title: "Expanded Services",
-      description:
-        "Added corporate and School event planning to our service offerings.",
-    },
-    {
-      year: "2018",
-      title: "Award Recognition",
-      description:
-        "Received 'Best Event Planning Company' award in the region.",
-    },
-    {
-      year: "2020",
-      title: "Virtual Events",
-      description: "Pioneered innovative virtual and hybrid event solutions.",
-    },
-    {
-      year: "2023",
-      title: "International Expansion",
-      description:
-        "Opened our first international office to serve global clients.",
     },
   ];
 
@@ -244,52 +212,6 @@ export default function AboutPage() {
             <Button size="lg" asChild>
               <Link to="/services">View Our Services</Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Timeline */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Journey</h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="max-w-2xl mx-auto text-muted-foreground">
-              A decade of creating exceptional events and unforgettable
-              experiences.
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/30"></div>
-
-            {/* Timeline Items */}
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="relative">
-                  {/* Timeline Dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary"></div>
-
-                  {/* Content */}
-                  <div
-                    className={`flex flex-col md:flex-row items-center ${
-                      index % 2 === 0 ? "md:flex-row-reverse" : ""
-                    }`}
-                  >
-                    <div className="md:w-1/2 text-center md:text-right px-4 md:pr-12">
-                      <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium mb-2">
-                        {milestone.year}
-                      </div>
-                      <h3 className="text-xl font-bold">{milestone.title}</h3>
-                    </div>
-                    <div className="md:w-1/2 mt-2 md:mt-0 text-center md:text-left px-4 md:pl-12">
-                      <p>{milestone.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

@@ -23,7 +23,7 @@ export default function ServicesPage() {
       title: "Corporate Events",
       description:
         "Professional corporate event management for conferences, team building activities, product launches, and more.",
-      image: "/assets/heroimage.png?height=600&width=400",
+      image: "/assets/coperativeImg.webp?height=600&width=400",
       features: [
         "Conference planning",
         "Team building activities",
@@ -37,45 +37,44 @@ export default function ServicesPage() {
       id: "cooking",
       title: "Cooking Services",
       description:
-        "Creative birthday party planning for all ages with custom themes, entertainment, and memorable experiences.",
+        "Professional cooking and catering services for events, providing delicious meals prepared with fresh ingredients and tailored to your taste and occasion.",
       image: "/assets/cooking.webp?height=600&width=400",
       features: [
-        "Theme development",
-        "Venue decoration",
-        "Entertainment booking",
-        "Custom cake and catering",
-        "Party favors",
-        "Photography services",
+        "Customized menu planning",
+        "Multi-cuisine options",
+        "Fresh and high-quality ingredients",
+        "On-site cooking and live food counters",
+        "Complete catering service for events",
       ],
     },
     {
       id: "bratabandha",
       title: "Bratabandha Ceremony",
       description:
-        "Elegant award ceremonies that recognize achievements with style, from corporate recognition to industry galas.",
+        "Traditional Bratabandha ceremony arrangements with cultural rituals, venue setup, and catering to honor this important milestone in a boy’s life.",
       image: "/assets/bartha.webp?height=600&width=400",
       features: [
-        "Venue selection",
-        "Stage design",
-        "Award presentation planning",
-        "Entertainment coordination",
-        "Red carpet experiences",
+        "Ritual and priest arrangements",
+        "Decorated mandap and seating setup",
+        "Traditional music and cultural performances",
+        "Customized catering and sweets",
         "Photography and videography",
+        "Guest hospitality and coordination",
       ],
     },
     {
       id: "pasni",
       title: "Pasni Ceremony",
       description:
-        "Book top-tier entertainment for your event, from live bands and DJs to performers and speakers.",
-      image: "/assets/heroimage.png?height=600&width=400",
+        "Memorable Pasni (rice feeding) celebrations with family-focused decoration, rituals, and catering to cherish your child’s first solid meal.",
+      image: "/assets/pasni.jpg?height=600&width=400",
       features: [
-        "Live music booking",
-        "DJ services",
-        "Performers and artists",
-        "Keynote speakers",
-        "Interactive entertainment",
-        "Custom entertainment packages",
+        "Priest and ritual setup",
+        "Beautiful stage and baby seating decoration",
+        "Customized baby outfit and accessories",
+        "Catering with traditional and modern dishes",
+        "Photography and videography",
+        "Guest management and hospitality",
       ],
     },
     {
@@ -83,7 +82,7 @@ export default function ServicesPage() {
       title: "Haldi & Mehendi ceremony",
       description:
         "Capture your event with professional photography and videography services that document every special moment.",
-      image: "/assets/heroimage.png?height=600&width=400",
+      image: "/assets/haldimendi.webp?height=600&width=400",
       features: [
         "Event photography",
         "Videography services",

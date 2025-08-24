@@ -43,7 +43,7 @@ export default function BookingPage() {
   });
 
   // Contact information for sending booking details
-  const whatsappNumber = "+9779800564411"; // Replace with your actual WhatsApp number
+  const whatsappNumber = "+9779819513221"; // Replace with your actual WhatsApp number
   const contactEmail = "monu9800564411@gmail.com"; // Replace with your actual email
 
   const handleChange = (
@@ -265,7 +265,7 @@ Please contact the customer to discuss their event requirements.
                         <SelectItem value="corporate">
                           Corporate Event
                         </SelectItem>
-                        <SelectItem value="birthday">Birthday Party</SelectItem>
+                        <SelectItem value="birthday">Pasni Party</SelectItem>
                         <SelectItem value="social">Social Gathering</SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
@@ -328,15 +328,12 @@ Please contact the customer to discuss their event requirements.
                         <SelectValue placeholder="Select budget range" />
                       </SelectTrigger>
                       <SelectContent position="popper">
-                        <SelectItem value="under5k">Under $5,000</SelectItem>
-                        <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
+                        <SelectItem value="under5k">Under NRP 15,000</SelectItem>
+                        <SelectItem value="5k-10k">NRP 20,000 - NRP 40,000</SelectItem>
                         <SelectItem value="10k-20k">
-                          $10,000 - $20,000
+                          NRP 40,000 - NRP 50,000
                         </SelectItem>
-                        <SelectItem value="20k-50k">
-                          $20,000 - $50,000
-                        </SelectItem>
-                        <SelectItem value="over50k">Over $50,000</SelectItem>
+                        <SelectItem value="over50k">Over NRP 50,000</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>

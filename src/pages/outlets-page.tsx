@@ -13,7 +13,7 @@ export default function OutletsPage() {
     {
       id: 1,
       name: "Surkhet",
-      image: "/assets/heroimage.png",
+      image: "/assets/location.avif?height=200&width=600",
       address: "Birendranagar-6, Surkhet",
       phone: "9848262653",
       email: "samitenthouse@gmail.com",
@@ -23,7 +23,7 @@ export default function OutletsPage() {
     {
       id: 2,
       name: "Dang",
-      image: "/assets/heroimage.png",
+      image: "/assets/location.avif?height=200&width=600",
       address: "Ghorahi-10,Dang",
       phone: "9876543210",
       email: "example@gmail.com",
@@ -33,7 +33,7 @@ export default function OutletsPage() {
     {
       id: 3,
       name: "Tulsipur",
-      image: "/assets/heroimage.png",
+      image: "/assets/location.avif?height=200&width=600",
       address: "Tulsipur-1,Dang",
       phone: "9876543210",
       email: "example@gmail.com",
