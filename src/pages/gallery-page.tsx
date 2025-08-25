@@ -252,8 +252,8 @@ import {
   TabsList,
   TabsTrigger,
 } from "../components/ui/tabs";
-import { Dialog, DialogContent, DialogTrigger } from "../components/ui/dialog";
-import { X, Download, ArrowRight,Heart, Link } from "lucide-react";
+import { Dialog, DialogClose, DialogContent, DialogTrigger } from "../components/ui/dialog";
+import { X, Download, ArrowRight, Heart, Link } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { useGallery } from "../context/gallery-context";
 import { cn } from "../lib/utils";
@@ -449,14 +449,6 @@ export default function GalleryPage() {
 
                           {/* Enhanced overlay with gradient */}
                           <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                            {/* Image info */}
-                            <div className="text-white">
-                              <p className="font-medium text-sm">{image.alt}</p>
-                              <p className="text-xs text-white/80">
-                                Click to enlarge
-                              </p>
-                            </div>
-
                             {/* Like button (decorative) */}
                             <Button
                               variant="ghost"
@@ -512,7 +504,7 @@ export default function GalleryPage() {
                             className="w-full h-auto max-h-[80vh] object-contain rounded-xl"
                           />
 
-                          {/* Enhanced modal controls */}
+                          {/* Keep only ONE close button + download button */}
                           <div className="absolute top-4 right-4 flex gap-2">
                             <Button
                               variant="ghost"
@@ -525,29 +517,17 @@ export default function GalleryPage() {
                               <Download className="h-5 w-5" />
                               <span className="sr-only">Download image</span>
                             </Button>
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 touch-friendly"
-                              onClick={() => setSelectedImage(null)}
-                            >
-                              <X className="h-5 w-5" />
-                              <span className="sr-only">Close modal</span>
-                            </Button>
-                          </div>
 
-                          {/* Image information overlay */}
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                            <h3 className="text-white font-heading text-xl font-bold mb-2">
-                              {image.alt}
-                            </h3>
-                            <p className="text-white/80 text-sm">
-                              Part of our{" "}
-                              {categories
-                                .find((cat) => cat.id === category)
-                                ?.name.toLowerCase()}{" "}
-                              collection
-                            </p>
+                            <DialogClose asChild>
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                className="bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 touch-friendly"
+                              >
+                                <X className="h-5 w-5" />
+                                <span className="sr-only">Close modal</span>
+                              </Button>
+                            </DialogClose>
                           </div>
                         </div>
                       </DialogContent>
@@ -639,25 +619,33 @@ export default function GalleryPage() {
               <div className="font-heading text-2xl font-bold text-primary">
                 100%
               </div>
-              <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
+              <div className="text-sm text-muted-foreground">
+                Satisfaction Rate
+              </div>
             </div>
             <div className="text-center">
               <div className="font-heading text-2xl font-bold text-primary">
                 24/7
               </div>
-              <div className="text-sm text-muted-foreground">Support Available</div>
+              <div className="text-sm text-muted-foreground">
+                Support Available
+              </div>
             </div>
             <div className="text-center">
               <div className="font-heading text-2xl font-bold text-primary">
                 90+
               </div>
-              <div className="text-sm text-muted-foreground">Expert Vendors</div>
+              <div className="text-sm text-muted-foreground">
+                Expert Vendors
+              </div>
             </div>
             <div className="text-center">
               <div className="font-heading text-2xl font-bold text-primary">
                 Free
               </div>
-              <div className="text-sm text-muted-foreground">Initial Consultation</div>
+              <div className="text-sm text-muted-foreground">
+                Initial Consultation
+              </div>
             </div>
           </div>
         </div>
