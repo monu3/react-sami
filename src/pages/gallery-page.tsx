@@ -253,7 +253,7 @@ import {
   TabsTrigger,
 } from "../components/ui/tabs";
 import { Dialog, DialogClose, DialogContent, DialogTrigger } from "../components/ui/dialog";
-import { X, Download, ArrowRight, Heart, Link } from "lucide-react";
+import { X, Download, ArrowRight, Link } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { useGallery } from "../context/gallery-context";
 import { cn } from "../lib/utils";
@@ -446,23 +446,6 @@ export default function GalleryPage() {
                             alt={image.alt}
                             className="w-full h-64 sm:h-80 object-cover transition-transform duration-500 group-hover:scale-110 group-active:scale-105"
                           />
-
-                          {/* Enhanced overlay with gradient */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                            {/* Like button (decorative) */}
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="bg-white/20 backdrop-blur-sm text-white hover:text-primary opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-all duration-300 touch-friendly"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                // Add to favorites functionality could go here
-                              }}
-                            >
-                              <Heart className="h-4 w-4" />
-                              <span className="sr-only">Add to favorites</span>
-                            </Button>
-                          </div>
 
                           {/* Download button - always visible on mobile, hover on desktop */}
                           <Button
