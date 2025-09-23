@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "../ui/button";
 
 export default function Footer() {
@@ -79,7 +75,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold text-foreground mb-4">
               Contact Us
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-4 items-center">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-0.5 text-primary" />
                 <span>Sanihall line, Surkhet</span>
@@ -151,7 +147,6 @@ export default function Footer() {
   );
 }
 
-
 // import { Link } from "react-router-dom";
 // import {
 //   Mail,
@@ -180,7 +175,7 @@ export default function Footer() {
 
 //   const services = [
 //     "Wedding Planning",
-//     "Corporate Events", 
+//     "Corporate Events",
 //     "Cultural Celebrations",
 //     "School Events",
 //     "Catering Services",
@@ -192,11 +187,11 @@ export default function Footer() {
 //       {/* Decorative background elements for luxury feel */}
 //       <div className="absolute top-0 right-0 w-64 h-64 gradient-gold opacity-5 rounded-full -translate-y-32 translate-x-32"></div>
 //       <div className="absolute bottom-0 left-0 w-48 h-48 gradient-gold opacity-5 rounded-full translate-y-24 -translate-x-24"></div>
-      
+
 //       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
 //         {/* Main footer content */}
 //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12 lg:py-16">
-          
+
 //           {/* Company Info Section - Enhanced */}
 //           <div className="lg:col-span-1">
 //             <div className="mb-6">
@@ -210,10 +205,10 @@ export default function Footer() {
 //               </h3>
 //             </div>
 //             <p className="text-white/80 mb-6 leading-relaxed">
-//               Creating unforgettable moments and exceptional events with luxury, 
+//               Creating unforgettable moments and exceptional events with luxury,
 //               elegance, and attention to every detail for over a decade.
 //             </p>
-            
+
 //             {/* Enhanced stats */}
 //             <div className="grid grid-cols-2 gap-4 mb-6">
 //               <div className="text-center bg-white/10 rounded-lg p-3">
@@ -227,7 +222,7 @@ export default function Footer() {
 //             </div>
 
 //             {/* CTA Button */}
-//             <Button 
+//             <Button
 //               className="gradient-gold text-navy font-semibold w-full touch-friendly"
 //               asChild
 //             >
@@ -246,8 +241,8 @@ export default function Footer() {
 //             <ul className="space-y-3">
 //               {quickLinks.map((link) => (
 //                 <li key={link.path}>
-//                   <Link 
-//                     to={link.path} 
+//                   <Link
+//                     to={link.path}
 //                     className="text-white/80 hover:text-primary transition-colors duration-300 flex items-center group"
 //                   >
 //                     <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -278,7 +273,7 @@ export default function Footer() {
 //             <h3 className="font-heading text-lg font-bold text-white mb-6">
 //               Get In Touch
 //             </h3>
-            
+
 //             {/* Contact details with improved styling */}
 //             <div className="space-y-4 mb-6">
 //               <div className="flex items-start space-x-3 group">
@@ -290,15 +285,15 @@ export default function Footer() {
 //                   <p className="text-white/70 text-sm">Sanihall line, Surkhet</p>
 //                 </div>
 //               </div>
-              
+
 //               <div className="flex items-start space-x-3 group">
 //                 <div className="bg-primary/20 p-2 rounded-lg">
 //                   <Phone className="h-4 w-4 text-primary" />
 //                 </div>
 //                 <div>
 //                   <p className="text-white/90 font-medium">Phone</p>
-//                   <a 
-//                     href="tel:9819513221" 
+//                   <a
+//                     href="tel:9819513221"
 //                     className="text-white/70 text-sm hover:text-primary transition-colors"
 //                   >
 //                     9819513221
@@ -312,8 +307,8 @@ export default function Footer() {
 //                 </div>
 //                 <div>
 //                   <p className="text-white/90 font-medium">Email</p>
-//                   <a 
-//                     href="mailto:samitenthouse@gmail.com" 
+//                   <a
+//                     href="mailto:samitenthouse@gmail.com"
 //                     className="text-white/70 text-sm hover:text-primary transition-colors"
 //                   >
 //                     samitenthouse@gmail.com
@@ -326,9 +321,9 @@ export default function Footer() {
 //             <div>
 //               <h4 className="text-white font-medium mb-4">Follow Our Journey</h4>
 //               <div className="flex space-x-3">
-//                 <Button 
-//                   variant="ghost" 
-//                   size="icon" 
+//                 <Button
+//                   variant="ghost"
+//                   size="icon"
 //                   className="bg-white/10 hover:bg-primary/20 text-white hover:text-primary transition-all duration-300 touch-friendly"
 //                   asChild
 //                 >
@@ -341,10 +336,10 @@ export default function Footer() {
 //                     <span className="sr-only">Facebook</span>
 //                   </a>
 //                 </Button>
-                
-//                 <Button 
-//                   variant="ghost" 
-//                   size="icon" 
+
+//                 <Button
+//                   variant="ghost"
+//                   size="icon"
 //                   className="bg-white/10 hover:bg-primary/20 text-white hover:text-primary transition-all duration-300 touch-friendly"
 //                   asChild
 //                 >
@@ -357,10 +352,10 @@ export default function Footer() {
 //                     <span className="sr-only">Instagram</span>
 //                   </a>
 //                 </Button>
-                
-//                 <Button 
-//                   variant="ghost" 
-//                   size="icon" 
+
+//                 <Button
+//                   variant="ghost"
+//                   size="icon"
 //                   className="bg-white/10 hover:bg-primary/20 text-white hover:text-primary transition-all duration-300 touch-friendly"
 //                   asChild
 //                 >
@@ -397,7 +392,7 @@ export default function Footer() {
 //                 placeholder="Enter your email"
 //                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
 //               />
-//               <Button 
+//               <Button
 //                 className="gradient-gold text-navy font-semibold px-6 touch-friendly"
 //               >
 //                 Subscribe
@@ -414,16 +409,16 @@ export default function Footer() {
 //               <Heart className="h-4 w-4 text-primary" />
 //               <span>Created by Monu Siddiki</span>
 //             </div>
-            
+
 //             <div className="flex items-center space-x-6 text-sm">
-//               <Link 
-//                 to="/privacy" 
+//               <Link
+//                 to="/privacy"
 //                 className="text-white/70 hover:text-primary transition-colors"
 //               >
 //                 Privacy Policy
 //               </Link>
-//               <Link 
-//                 to="/terms" 
+//               <Link
+//                 to="/terms"
 //                 className="text-white/70 hover:text-primary transition-colors"
 //               >
 //                 Terms of Service
