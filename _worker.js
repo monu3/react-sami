@@ -2,10 +2,12 @@ import { createCors } from "itty-cors";
 
 const { preflight, corsify } = createCors({
   origins: ["*"],
-  methods: ["GET", "POST", "OPTIONS"],
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
   headers: ["Content-Type", "Authorization"],
   credentials: true, // Required for cookie authentication
 });
+
+const MAX_UPLOAD_BYTES = 10 * 1024 * 1024; // 10MB, keep in sync with the frontend
 
 // Simple Web Crypto JWT Generator/Verifier
 async function signJWT(payload, secret) {
@@ -80,6 +82,14 @@ function getCookie(request, name) {
   return cookies[name] || null;
 }
 
+// Shared auth guard for protected endpoints
+async function requireAuth(request, env) {
+  const token = getCookie(request, "auth_token");
+  const payload = token ? await verifyJWT(token, env.JWT_SECRET) : null;
+  if (!payload || payload.exp < Date.now()) return null;
+  return payload;
+}
+
 export default {
   async fetch(request, env, ctx) {
     if (request.method === "OPTIONS") return preflight(request);
@@ -108,6 +118,11 @@ export default {
     // Upload Endpoint (Protected)
     if (url.pathname === "/api/upload" && request.method === "POST") {
       return handleUploadRequest(request, env);
+    }
+
+    // Delete Endpoint (Protected)
+    if (url.pathname === "/api/images" && request.method === "DELETE") {
+      return handleDeleteImage(request, env);
     }
 
     // Serve React static assets
@@ -204,14 +219,8 @@ async function handleGetFolders(request, env) {
 }
 
 async function handleAuthCheck(request, env) {
-  const token = getCookie(request, "auth_token");
-  if (!token)
-    return corsify(
-      new Response(JSON.stringify({ authenticated: false }), { status: 401 }),
-    );
-
-  const payload = await verifyJWT(token, env.JWT_SECRET);
-  if (!payload || payload.exp < Date.now()) {
+  const payload = await requireAuth(request, env);
+  if (!payload) {
     return corsify(
       new Response(JSON.stringify({ authenticated: false }), { status: 401 }),
     );
@@ -223,11 +232,8 @@ async function handleAuthCheck(request, env) {
 }
 
 async function handleUploadRequest(request, env) {
-  // Check Authentication
-  const token = getCookie(request, "auth_token");
-  const payload = token ? await verifyJWT(token, env.JWT_SECRET) : null;
-
-  if (!payload || payload.exp < Date.now()) {
+  const payload = await requireAuth(request, env);
+  if (!payload) {
     return corsify(
       new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 }),
     );
@@ -247,6 +253,15 @@ async function handleUploadRequest(request, env) {
       );
     }
 
+    // Enforce the size cap server-side too — the frontend check alone can be bypassed.
+    if (typeof file.size === "number" && file.size > MAX_UPLOAD_BYTES) {
+      return corsify(
+        new Response(JSON.stringify({ error: "File exceeds the 10MB limit" }), {
+          status: 400,
+        }),
+      );
+    }
+
     const cloudinaryFormData = new FormData();
     cloudinaryFormData.append("file", file);
     cloudinaryFormData.append("folder", folder);
@@ -263,9 +278,86 @@ async function handleUploadRequest(request, env) {
     );
 
     const uploadData = await uploadResponse.json();
+
+    if (!uploadResponse.ok) {
+      return corsify(
+        new Response(
+          JSON.stringify({
+            error: uploadData.error?.message || "Upload failed",
+          }),
+          { status: uploadResponse.status },
+        ),
+      );
+    }
+
     return corsify(
       new Response(
-        JSON.stringify({ success: true, url: uploadData.secure_url }),
+        JSON.stringify({
+          success: true,
+          url: uploadData.secure_url,
+          publicId: uploadData.public_id,
+        }),
+        { status: 200 },
+      ),
+    );
+  } catch (error) {
+    return corsify(
+      new Response(JSON.stringify({ error: error.message }), { status: 500 }),
+    );
+  }
+}
+
+// Delete one or more images from Cloudinary by public_id.
+// Body: { "publicId": "folder/name" } or { "publicIds": ["folder/a", "folder/b"] }
+async function handleDeleteImage(request, env) {
+  const payload = await requireAuth(request, env);
+  if (!payload) {
+    return corsify(
+      new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 }),
+    );
+  }
+
+  try {
+    const body = await request.json();
+    const publicIds = body.publicIds || (body.publicId ? [body.publicId] : []);
+
+    if (!publicIds.length) {
+      return corsify(
+        new Response(
+          JSON.stringify({ error: "publicId or publicIds is required" }),
+          { status: 400 },
+        ),
+      );
+    }
+
+    const query = publicIds
+      .map((id) => `public_ids[]=${encodeURIComponent(id)}`)
+      .join("&");
+
+    const deleteResponse = await fetch(
+      `https://api.cloudinary.com/v1_1/${env.CLOUDINARY_CLOUD_NAME}/resources/image/upload?${query}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Basic ${btoa(`${env.CLOUDINARY_API_KEY}:${env.CLOUDINARY_API_SECRET}`)}`,
+        },
+      },
+    );
+
+    const data = await deleteResponse.json();
+
+    if (!deleteResponse.ok) {
+      return corsify(
+        new Response(
+          JSON.stringify({ error: "Failed to delete image", details: data }),
+          { status: deleteResponse.status },
+        ),
+      );
+    }
+
+    return corsify(
+      new Response(
+        JSON.stringify({ success: true, deleted: data.deleted || {} }),
         { status: 200 },
       ),
     );
@@ -304,6 +396,8 @@ async function handleGalleryRequest(request, env) {
       ),
       alt: img.public_id.split("/").pop().replace(/[-_]/g, " "),
       category: folder,
+      // Exposed so the frontend can request deletion by exact public_id.
+      publicId: img.public_id,
     }));
 
     return corsify(
