@@ -11,6 +11,7 @@ import ContactPage from "./pages/contact-page";
 import OutletsPage from "./pages/outlets-page";
 import "./App.css";
 import { GalleryProvider } from "./context/gallery-context";
+import { Dashboard } from "./pages/dashboard-page";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="contact" element={<ContactPage />} />
               <Route path="outlets" element={<OutletsPage />} />
             </Route>
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </BrowserRouter>
       </GalleryProvider>

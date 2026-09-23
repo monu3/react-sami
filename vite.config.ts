@@ -15,5 +15,6 @@ export default defineConfig({
     proxy: {
       "/api": "http://localhost:5173",
     },
+    allowedHosts: true, // <--- Bypasses the host check for local dev
   },
 });
