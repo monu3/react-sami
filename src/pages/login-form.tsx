@@ -8,7 +8,7 @@ import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import logo from "/assets/eventlogo.png";
 
-const TURNSTILE_SITE_KEY = "1x00000000000000000000AA";
+const TURNSTILE_SITE_KEY = "0x4AAAAAAE_pkldPFAzROcfB";
 
 type LoginFormProps = React.ComponentProps<"div"> & {
   username: string;
